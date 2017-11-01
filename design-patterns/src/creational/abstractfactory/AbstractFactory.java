@@ -1,11 +1,11 @@
 package creational.abstractfactory;
 
 /**
- * Created by plank-abhijit on 11/1/2017.
+ * Created by abhijit on 11/1/2017.
  */
 enum AssembleType {
-    PRODUCT_A,
-    PRODUCT_B
+    ASSEMBLE_A,
+    ASSEMBLE_B
 }
 abstract class AbstractFactory {
     private static final ProductAssembleOne PRODUCT_FACTORY_A = new ProductAssembleOne();
@@ -14,10 +14,10 @@ abstract class AbstractFactory {
     static AbstractFactory getFactory(AssembleType familyType) {
         AbstractFactory factory = null;
         switch (familyType) {
-            case PRODUCT_A:
+            case ASSEMBLE_A:
                 factory = PRODUCT_FACTORY_A;
                 break;
-            case PRODUCT_B:
+            case ASSEMBLE_B:
                 factory = PRODUCT_FACTORY_B;
                 break;
         }
